@@ -1,0 +1,131 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+.side-menu-card-container {
+  display: block;
+  max-width: 100%;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.side-menu-card {
+  max-width: 100%;
+  height: auto;
+  background: #FFFFFF;
+  mix-blend-mode: normal;
+  box-shadow: 0px 10px 15px rgba(81, 80, 80, 0.08);
+  border-radius: 10px;
+  margin-right: auto;
+  margin-left:  auto;
+  padding: 15px;
+  margin-bottom: 50px;
+}
+
+.side-menu-content {
+  margin: 5%;// margin-top: 26%;
+}
+
+.side-menu-list {
+  padding: 0px;
+}
+
+.side-menu-item-link{
+  text-decoration:none;
+  color: #595959;
+  cursor: pointer;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.side-menu-item {
+  display: block;
+  text-align: center;
+  transition: 0.5s;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+.side-menu-item-active {
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  color: #2867B2;
+  margin-bottom: 10px;
+  background-color: rgb(243, 246, 250);
+  padding: 15px;
+  font-weight: bolder;
+}
+
+.side-menu-item:hover {
+  color: #2867B2;
+  background-color: rgb(243, 246, 250);
+  border-radius: 10px;
+}
+
+.side-menu-item-link:hover {
+  color: rgba(254, 133, 65, 0.72);
+}
+
+.side-menu-item-image img {
+  max-width: 70px;
+  max-height: 70px;
+}
+
+.side-menu-item-image {
+  width: 100%;
+}
+
+   /* Portrait */
+   @media only screen 
+   and (min-device-width: 320px) 
+   and (max-device-width: 667px) 
+   and (-webkit-min-device-pixel-ratio: 2)
+   and (orientation: portrait) { 
+     .side-menu-list {
+       display: flex;
+       margin: 0px;
+       justify-content: center;
+     }
+
+     .side-menu-content {
+       margin: 10px;
+     }
+
+     .side-menu-item {
+        margin-bottom: 0px;
+        padding: 15px;
+     }
+
+     .side-menu-item-active {
+        margin-bottom: 0px;
+        padding: 15px;
+     }
+
+     .side-menu-card {
+        margin-bottom: 20px;
+        width: 370px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        overflow-x: scroll;
+        overflow-y: hidden;
+     }
+
+     .text-space {
+      margin-bottom: 0px;
+      font-size: 12px;
+     }
+
+     .side-menu-item-image img {
+      max-width: 60px;
+      max-height: 60px;
+    }
+
+    // .side-menu-card-container {
+    //   display: inline;
+    //   position: relative;
+    //   overflow-x: scroll;
+    //   overflow-y: hidden;
+    // }
+   }
