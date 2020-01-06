@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DisplayCard component 1`] = `
+<div
+  className="side-menu-card-container"
+>
+  <div
+    class="side-menu-card"
+  >
+    <div
+      className="side-menu-content"
+    >
+      <div
+        className="side-menu-list"
+      >
+        <a
+          className="side-menu-item-link"
+          onClick={[Function]}
+        >
+          <div
+            className="side-menu-item-active"
+          >
+            <div
+              className="side-menu-item-image"
+            />
+            <div
+              className="text-space"
+            >
+              Give consent
+            </div>
+          </div>
+        </a>
+        <a
+          className="side-menu-item-link"
+          onClick={[Function]}
+        >
+          <div
+            className="side-menu-item"
+          >
+            <div
+              className="side-menu-item-image"
+            />
+            <div
+              className="text-space"
+            >
+              Collected consents
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
