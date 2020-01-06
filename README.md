@@ -1,3 +1,8 @@
+
+<a href="https://codeclimate.com/github/Proception/challenges/maintainability"><img src="https://api.codeclimate.com/v1/badges/5a1604f66fe7aa7e131d/maintainability" /></a>
+
+<a href="https://codeclimate.com/github/Proception/challenges/test_coverage"><img src="https://api.codeclimate.com/v1/badges/5a1604f66fe7aa7e131d/test_coverage" /></a>
+
 This challenge is used by Didomi for evaluating candidates for front-end development positions.
 
 # Background
