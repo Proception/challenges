@@ -1,0 +1,28 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/challenges
+    docker:
+      - image: circleci/node:9.7.1-stretch
+    steps:
+      - checkout
+      - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@5'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: install-npm-wee
+          command: npm install
+      - run:
+          name: test
+          command: npm test
+      - run:
+          name: Setup Code Climate test-reporter
+          command: | 
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+      - run:
+          name: Upload coverage results to Code Climate
+          command: |
+            ./cc-test-reporter upload-coverage -i coverage/coverage-final.json
