@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import {
   BrowserRouter as Router
 } from 'react-router-dom';
+import ConsentView from '../../views/ConsentView.jsx';
+
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-import ConsentView from '../../views/ConsentView.jsx';
 
 
 export default class App extends Component {
@@ -13,7 +13,7 @@ export default class App extends Component {
   render() {
     return (
       <Router>
-        <ConsentView />
+        <ConsentView defaultMenu={'consentForm'} />
       </Router>
     );
   }
