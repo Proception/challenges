@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Consent Form Component renders as expected 1`] = `
+<div
+  className="form-container"
+>
+  <form
+    className="consent-form"
+    id="consentForm"
+    noValidate={true}
+    onSubmit={[Function]}
+  >
+    <div
+      className="input-container"
+    >
+      <input
+        class="input-field"
+        name="name"
+        onChange={[Function]}
+        placeholder="Name"
+        value=""
+      />
+      <input
+        class="input-field"
+        name="email"
+        onChange={[Function]}
+        placeholder="Email address"
+        value=""
+      />
+    </div>
+    <div
+      className="consent-title"
+    >
+      <span>
+        I agree to : 
+      </span>
+    </div>
+    <div
+      className="consent-container"
+    >
+      <div
+        className="consent-list"
+      />
+    </div>
+    <div
+      className="button-container"
+    >
+      <button
+        className="give-consent-button"
+        disabled={true}
+        id="consentbutton"
+        onClick=""
+      >
+        <div>
+          Give consent
+        </div>
+      </button>
+    </div>
+  </form>
+</div>
+`;

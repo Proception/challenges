@@ -1,17 +1,27 @@
 import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
 import {
   withRouter
 } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap';
 import DisplayCard from '../components/DisplayCard/DisplayCard.jsx';
 import SideMenu from '../components/SideMenu/SideMenu.jsx';
+import ConsentForm from '../components/Consent/ConsentForm/ConsentForm.jsx';
+import {
+  getAllConsents,
+  saveConsent,
+  updateConsent
+} from '../actions/consentActions';
 import './consentview.scss';
 
 
-class ConsentView extends Component {
+export class ConsentView extends Component {
+  constructor() {
+    super();
+  }
 
   state = {
-    activeMenu: 'consentForm',
+    activeMenu: '',
   }
 
   componentDidMount() {
@@ -39,15 +49,21 @@ class ConsentView extends Component {
   }
 
   renderConsentForm = () => {
-    return 'get consent from user';
+    const consents = [
+      {name: '',value: 'Receive Newsletter'},
+      {name: '', value: 'Be shown targeted ads'},
+      {name: '', value: 'Contribute to anonymous visit statistics'}
+    ];
+    return <ConsentForm totalConsents={this.props.totalConsents} updateConsent={this.props.updateConsent} saveConsent={this.props.saveConsent} consents={consents} />;
   }
 
   renderConsentList = () => {
-    return 'view consent list';
+    return <div className={'consent-list-table'}>{'view consent list'}</div>;
   }
 
   renderMenuContent = () => {
-    switch (this.state.activeMenu) {
+    const currentMenu = this.state.activeMenu ? this.state.activeMenu : this.props.defaultMenu;
+    switch (currentMenu) {
     case 'consentList':
       return this.renderConsentList();
     case 'consentForm':
@@ -72,7 +88,7 @@ class ConsentView extends Component {
     ];
 
     return <SideMenu
-      activeMenu={this.state.activeMenu}
+      activeMenu={this.state.activeMenu ?  this.state.activeMenu : this.props.defaultMenu}
       menuItems = {menuItems}
     />;
   }
@@ -101,4 +117,8 @@ class ConsentView extends Component {
   }
 }
 
-export default withRouter(ConsentView);
+export  const mapStateToProps = state => ({
+  totalConsents: state.consentReducer
+});
+
+export default withRouter(connect(mapStateToProps, {saveConsent, updateConsent, getAllConsents})(ConsentView));
