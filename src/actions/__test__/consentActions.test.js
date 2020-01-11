@@ -11,7 +11,7 @@ import {
   PREPARE_CONSENT_REQUEST,
   SET_CONSENT_SUCCESS,
   UPDATE_CONSENT_SUCCESS,
-  SET_CONSENT_ERROR
+  SET_CONSENT_ERROR,
 } from '../types';
 
 
@@ -76,6 +76,20 @@ describe('Consents Actions Tests', () => {
 
     const expectedPayload = [{ type: PREPARE_CONSENT_REQUEST }, {
       type: SET_CONSENT_ERROR, payload: 'Bad Response Exception: Invalid credentials'}];
+    expect(actions).toEqual(expectedPayload);
+    done();
+  });
+  it('should dispatch error consent action for unauthorized access', async (done) => {
+    const consentData = { email: 'omasan', name: 'ddsdd', selectedConsents: ['Contribute to anonymous visit statistics'] };
+    moxios.stubRequest('http://localhost:4200/api/v1/consent', mockResponse[401](consentData));
+    // Dispatch the action
+    await store.dispatch(saveConsent(consentData, 401));
+
+    // Test if your store dispatched the expected actions
+    const actions = store.getActions();
+
+    const expectedPayload = [{ type: PREPARE_CONSENT_REQUEST }, {
+      type: SET_CONSENT_ERROR, payload: 'Unauthorized Response Exception: You do not have access to consents'}];
     expect(actions).toEqual(expectedPayload);
     done();
   });

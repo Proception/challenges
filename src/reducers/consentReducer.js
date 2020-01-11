@@ -3,7 +3,8 @@ import {
   PREPARE_CONSENT_REQUEST,
   SET_CONSENT_ERROR,
   UPDATE_CONSENT_ERROR,
-  UPDATE_CONSENT_SUCCESS
+  UPDATE_CONSENT_SUCCESS,
+  GET_ALL_CONSENTS_SUCCESS
 } from '../actions/types';
 
 const initialState = {
@@ -33,6 +34,12 @@ export default (state = initialState, action) => {
       ...state,
       isLoading: false,
       consents: [...state.consents.filter(consent => consent.email !== action.payload.email), action.payload]
+    };
+  case GET_ALL_CONSENTS_SUCCESS:
+    return {
+      ...state,
+      isLoading: false,
+      consents: [...state.consents, ...action.payload]
     };
   default:
     return state;

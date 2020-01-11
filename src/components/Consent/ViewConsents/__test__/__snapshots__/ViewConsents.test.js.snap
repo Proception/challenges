@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewConsents component should render ViewConsents correctly 1`] = `
+<div
+  className="table-container"
+>
+  <div
+    className="table-header"
+  >
+    <div
+      className="table-column"
+    >
+      Name
+    </div>
+    <div
+      className="table-column"
+    >
+      Email
+    </div>
+    <div
+      className="table-column"
+    >
+      Consent given for
+    </div>
+  </div>
+  <div
+    className="table-body"
+  >
+    <div
+      className="table-row"
+    >
+      <div
+        className="table-column"
+      >
+        Benedict
+      </div>
+      <div
+        className="table-column"
+      >
+        omasan.esimaje@gmail.com
+      </div>
+      <div
+        className="table-column"
+      >
+        Receive Newsletter, Be shown targeted ads
+      </div>
+    </div>
+    <div
+      className="table-row"
+    >
+      <div
+        className="table-column"
+      >
+        Omasan
+      </div>
+      <div
+        className="table-column"
+      >
+        benedict.esimaje@gmail.com
+      </div>
+      <div
+        className="table-column"
+      >
+        Be shown targeted ads
+      </div>
+    </div>
+  </div>
+  <div
+    className="table-footer"
+  >
+    <div
+      className="table-footer"
+    >
+      <div
+        className="table-footer-column"
+      >
+        <a
+          className="page-navigators"
+          onClick={[Function]}
+        >
+          
+        </a>
+      </div>
+      <div
+        className="table-footer-column"
+      >
+        <a
+          className="page-navigators page-number-spacing active-page"
+          onClick={[Function]}
+          value={
+            Array [
+              "1",
+            ]
+          }
+        >
+          1
+        </a>
+        <a
+          className="page-navigators page-number-spacing "
+          onClick={[Function]}
+          value={
+            Array [
+              "2",
+            ]
+          }
+        >
+          2
+        </a>
+      </div>
+      <div
+        className="table-footer-column"
+      >
+        <a
+          className="page-navigators"
+          onClick={[Function]}
+        >
+          Next page  &gt;&gt;
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

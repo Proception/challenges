@@ -24,14 +24,14 @@ describe('Consent View Component', () => {
   describe('Consent Display Element', () => {
     it('Should match consent view snapshot', () => {
       const component = renderer.create(
-        <ConsentView defaultMenu={'consentForm'} />,
+        <ConsentView defaultMenu={'consentForm'} getAllConsents={() => {}} />,
       );
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();
     });
     it('Should render side menu with two menu items', () => {
       const tree = renderer.create(
-        <ConsentView />,
+        <ConsentView  getAllConsents={() => {}}/>,
       );
       const instance = tree.root;
       const menuItems = instance.findAllByProps({className: 'side-menu-item-link'});
@@ -49,27 +49,18 @@ describe('Consent View Component', () => {
         {name: '', value: 'Contribute to anonymous visit statistics'}
       ];
       const tree = renderer.create(
-        <ConsentView defaultMenu={'consentForm'} totalConsents={totalConsents} updateConsent={() => {}} saveConsent={() => {}} consents={consents} />,
+        <ConsentView defaultMenu={'consentForm'} getAllConsents={() => {}} totalConsents={totalConsents} updateConsent={() => {}} saveConsent={() => {}} consents={consents} />,
       );
 
       const instance = tree.root;
       const consentForm = instance.findByProps({className: 'consent-form'});
       expect(consentForm.children.length).toEqual(4);
     });
-    it('Should render consent list with 1 item', () => {
-      const tree = renderer.create(
-        <ConsentView defaultMenu={'consentList'}/>,
-      );
-
-      const instance = tree.root;
-      const consentListTable = instance.findByProps({className: 'consent-list-table'});
-      expect(consentListTable.children[0]).toEqual('view consent list');
-    });
     it('Should call viewConsentForm', () => {
       const props = {
         history : []
       };
-      let wrapper = shallow(<ConsentView  {...props}/>);
+      let wrapper = shallow(<ConsentView  {...props} getAllConsents={() => {}}/>);
       sinon.spy(wrapper.instance(), 'viewConsentForm');
       wrapper.instance().viewConsentForm();
 
@@ -77,20 +68,22 @@ describe('Consent View Component', () => {
         .toEqual(true);
     });
     it('Should call viewConsentList', () => {
+      const totalConsents = [{name: 'ben', email: 'omasan.esimaje@gmail.com', consents: ['consentA', 'consentB']}];
       const props = {
         history : []
       };
-      let wrapper = shallow(<ConsentView  {...props}/>);
+      let wrapper = shallow(<ConsentView  {...props} totalConsents={totalConsents} getAllConsents={() => {}} />);
       sinon.spy(wrapper.instance(), 'viewConsentList');
       wrapper.instance().viewConsentList();
       expect(wrapper.instance().viewConsentList.calledOnce)
         .toEqual(true);
     });
     it('Should change active menu', () => {
+      const totalConsents = [{name: 'ben', email: 'omasan.esimaje@gmail.com', consents: ['consentA', 'consentB']}];
       const props = {
         history : []
       };
-      let wrapper = shallow(<ConsentView  {...props}/>);
+      let wrapper = shallow(<ConsentView  {...props} totalConsents={totalConsents} getAllConsents={() => {}} />);
       sinon.spy(wrapper.instance(), 'setActiveTab');
       wrapper.instance().setActiveTab('consentList');
       expect(wrapper.instance().setActiveTab.calledOnce)
