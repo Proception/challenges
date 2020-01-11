@@ -7,6 +7,7 @@ import { Container, Row, Col } from 'reactstrap';
 import DisplayCard from '../components/DisplayCard/DisplayCard.jsx';
 import SideMenu from '../components/SideMenu/SideMenu.jsx';
 import ConsentForm from '../components/Consent/ConsentForm/ConsentForm.jsx';
+import ViewConsents from '../components/Consent/ViewConsents/ViewConsents.jsx';
 import {
   getAllConsents,
   saveConsent,
@@ -25,6 +26,7 @@ export class ConsentView extends Component {
   }
 
   componentDidMount() {
+    this.props.getAllConsents();
   }
 
   setActiveTab = (activeMenu) => {
@@ -58,7 +60,8 @@ export class ConsentView extends Component {
   }
 
   renderConsentList = () => {
-    return <div className={'consent-list-table'}>{'view consent list'}</div>;
+    const {consents} = this.props.totalConsents;
+    return <ViewConsents  consents={consents}/>;
   }
 
   renderMenuContent = () => {

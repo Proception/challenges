@@ -1,0 +1,466 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table component Table component should render table component with excatly 3 consents 1`] = `
+<div
+  className="table-container"
+>
+  <div
+    className="table-header"
+  >
+    <div
+      className="table-column"
+    >
+      Name
+    </div>
+    <div
+      className="table-column"
+    >
+      Email
+    </div>
+    <div
+      className="table-column"
+    >
+      Consent given for
+    </div>
+  </div>
+  <div
+    className="table-body"
+  >
+    <div
+      className="table-row"
+    >
+      <div
+        className="table-column"
+      >
+        Benedict
+      </div>
+      <div
+        className="table-column"
+      >
+        omasan.esimaje@gmail.com
+      </div>
+      <div
+        className="table-column"
+      >
+        Receive Newsletter, Be shown targeted ads
+      </div>
+    </div>
+    <div
+      className="table-row"
+    >
+      <div
+        className="table-column"
+      >
+        Omasan
+      </div>
+      <div
+        className="table-column"
+      >
+        benedict.esimaje@gmail.com
+      </div>
+      <div
+        className="table-column"
+      >
+        Be shown targeted ads
+      </div>
+    </div>
+  </div>
+  <div
+    className="table-footer"
+  >
+    <div
+      className="table-footer"
+    >
+      <div
+        className="table-footer-column"
+      >
+        <a
+          className="page-navigators"
+          onClick={[Function]}
+        >
+          
+        </a>
+      </div>
+      <div
+        className="table-footer-column"
+      >
+        <a
+          className="page-navigators page-number-spacing active-page"
+          onClick={[Function]}
+          value={
+            Array [
+              "1",
+            ]
+          }
+        >
+          1
+        </a>
+        <a
+          className="page-navigators page-number-spacing "
+          onClick={[Function]}
+          value={
+            Array [
+              "2",
+            ]
+          }
+        >
+          2
+        </a>
+      </div>
+      <div
+        className="table-footer-column"
+      >
+        <a
+          className="page-navigators"
+          onClick={[Function]}
+        >
+          Next page  &gt;&gt;
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Table component Table component should render table component with less than 3 consents 1`] = `
+<div
+  className="table-container"
+>
+  <div
+    className="table-header"
+  >
+    <div
+      className="table-column"
+    >
+      Name
+    </div>
+    <div
+      className="table-column"
+    >
+      Email
+    </div>
+    <div
+      className="table-column"
+    >
+      Consent given for
+    </div>
+  </div>
+  <div
+    className="table-body"
+  >
+    <div
+      className="table-row"
+    >
+      <div
+        className="table-column"
+      >
+        Benedict
+      </div>
+      <div
+        className="table-column"
+      >
+        omasan.esimaje@gmail.com
+      </div>
+      <div
+        className="table-column"
+      >
+        Receive Newsletter, Be shown targeted ads
+      </div>
+    </div>
+    <div
+      className="table-row"
+    >
+      <div
+        className="table-column"
+      >
+        Omasan
+      </div>
+      <div
+        className="table-column"
+      >
+        benedict.esimaje@gmail.com
+      </div>
+      <div
+        className="table-column"
+      >
+        Be shown targeted ads
+      </div>
+    </div>
+  </div>
+  <div
+    className="table-footer"
+  >
+    <div
+      className="table-footer"
+    >
+      <div
+        className="table-footer-column"
+      >
+        <a
+          className="page-navigators"
+          onClick={[Function]}
+        >
+          
+        </a>
+      </div>
+      <div
+        className="table-footer-column"
+      >
+        <a
+          className="page-navigators page-number-spacing active-page"
+          onClick={[Function]}
+          value={
+            Array [
+              "1",
+            ]
+          }
+        >
+          1
+        </a>
+      </div>
+      <div
+        className="table-footer-column"
+      >
+        <a
+          className="page-navigators"
+          onClick={[Function]}
+        >
+          
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Table component Table component should render table component with more than 3 consents 1`] = `
+<div
+  className="table-container"
+>
+  <div
+    className="table-header"
+  >
+    <div
+      className="table-column"
+    >
+      Name
+    </div>
+    <div
+      className="table-column"
+    >
+      Email
+    </div>
+    <div
+      className="table-column"
+    >
+      Consent given for
+    </div>
+  </div>
+  <div
+    className="table-body"
+  >
+    <div
+      className="table-row"
+    >
+      <div
+        className="table-column"
+      >
+        Benedict
+      </div>
+      <div
+        className="table-column"
+      >
+        omasan.esimaje@gmail.com
+      </div>
+      <div
+        className="table-column"
+      >
+        Receive Newsletter, Be shown targeted ads
+      </div>
+    </div>
+    <div
+      className="table-row"
+    >
+      <div
+        className="table-column"
+      >
+        Omasan
+      </div>
+      <div
+        className="table-column"
+      >
+        benedict.esimaje@gmail.com
+      </div>
+      <div
+        className="table-column"
+      >
+        Be shown targeted ads
+      </div>
+    </div>
+  </div>
+  <div
+    className="table-footer"
+  >
+    <div
+      className="table-footer"
+    >
+      <div
+        className="table-footer-column"
+      >
+        <a
+          className="page-navigators"
+          onClick={[Function]}
+        >
+          
+        </a>
+      </div>
+      <div
+        className="table-footer-column"
+      >
+        <a
+          className="page-navigators page-number-spacing active-page"
+          onClick={[Function]}
+          value={
+            Array [
+              "1",
+            ]
+          }
+        >
+          1
+        </a>
+        <a
+          className="page-navigators page-number-spacing "
+          onClick={[Function]}
+          value={
+            Array [
+              "2",
+            ]
+          }
+        >
+          2
+        </a>
+      </div>
+      <div
+        className="table-footer-column"
+      >
+        <a
+          className="page-navigators"
+          onClick={[Function]}
+        >
+          Next page  &gt;&gt;
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Table component TableColumn component should render column correctly if a single value is passed 1`] = `
+<div
+  className="table-column"
+>
+  beans
+</div>
+`;
+
+exports[`Table component TableColumn component should render column correctly if an array is passed 1`] = `
+<div
+  className="table-column"
+>
+  beans, rice
+</div>
+`;
+
+exports[`Table component TableFooter component should render table footer correctly 1`] = `
+<div
+  className="table-footer"
+>
+  <div
+    className="table-footer-column"
+  >
+    &lt;&lt; Previous page
+  </div>
+  <div
+    className="table-footer-column"
+  >
+    <a
+      className="page-navigators page-number-spacing active-page"
+      onClick={[Function]}
+      value={1}
+    >
+      1
+    </a>
+    <a
+      className="page-navigators page-number-spacing "
+      onClick={[Function]}
+      value={2}
+    >
+      2
+    </a>
+    <a
+      className="page-navigators page-number-spacing "
+      onClick={[Function]}
+      value={3}
+    >
+      3
+    </a>
+  </div>
+  <div
+    className="table-footer-column"
+  >
+    Next page &gt;&gt;
+  </div>
+</div>
+`;
+
+exports[`Table component TableHeader component should render table headers 1`] = `
+<div
+  className="table-header"
+>
+  <div
+    className="table-column"
+  >
+    Name
+  </div>
+  <div
+    className="table-column"
+  >
+    Email
+  </div>
+  <div
+    className="table-column"
+  >
+    Consent given for
+  </div>
+</div>
+`;
+
+exports[`Table component TableRow component should render no data message if no row data is passed 1`] = `
+<div
+  className="no-data-message"
+>
+  There is no consent data to display
+</div>
+`;
+
+exports[`Table component TableRow component should render row correctly if row data is passed 1`] = `
+<div
+  className="table-row"
+>
+  <div
+    className="table-column"
+  >
+    Benedict
+  </div>
+  <div
+    className="table-column"
+  >
+    omasan.esimaje@gmail.com
+  </div>
+  <div
+    className="table-column"
+  >
+    Receive Newsletter, Be shown targeted ads
+  </div>
+</div>
+`;

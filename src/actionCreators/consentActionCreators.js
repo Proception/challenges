@@ -2,7 +2,8 @@ import {
   SET_CONSENT_SUCCESS,
   PREPARE_CONSENT_REQUEST, 
   SET_CONSENT_ERROR,
-  UPDATE_CONSENT_SUCCESS
+  UPDATE_CONSENT_SUCCESS,
+  GET_ALL_CONSENTS_SUCCESS
 } from '../actions/types';
 
 
@@ -22,5 +23,10 @@ export const setConsentError = error => ({
 
 export const updateConsentSuccess = payload => ({
   type: UPDATE_CONSENT_SUCCESS,
+  payload
+});
+
+export const getAllConsentSuccess = payload => ({
+  type: GET_ALL_CONSENTS_SUCCESS,
   payload
 });

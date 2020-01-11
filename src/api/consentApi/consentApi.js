@@ -24,8 +24,9 @@ const updateConsentApi = async (url, data) => {
   return await response.json();
 };
 
-const getAllConsentsApi = () => {
-
+const getAllConsentsApi = async (url) => {
+  const response = await fetch(url, options('GET'));
+  return await response.json();
 };
 
 export {
