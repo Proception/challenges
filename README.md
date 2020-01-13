@@ -3,66 +3,38 @@
 
 <a href="https://codeclimate.com/github/Proception/challenges/test_coverage"><img src="https://api.codeclimate.com/v1/badges/5a1604f66fe7aa7e131d/test_coverage" /></a>
 
-This challenge is used by Didomi for evaluating candidates for front-end development positions.
-
 # Background
-In some specific cases, companies need to collect consent from consumers before using their data. For instance, website visitors might need to explicitly consent to receive email newsletters through a form before a company can send emails to those visitors.
+This is a consent management application composed of two sections, consent collection and consent management. It is a frontend application built with React and Redux.
 
-# The challenge
-The goal of this challenge is to build the simplest possible consent collection and management application where a user can enter its information and agree to a list of data processing. It's not very user-friendly but that'll do the trick for this time.
+## Core Dependecies
+- React
+- Redux
+- Redux Thunk
+- Node
 
-## Product specification
-The application is composed of two views.
+## Setup Locally
+- Install Node on your machine;
+    - For Mac follow instructions <a href="https://treehouse.github.io/installation-guides/mac/node-mac.html">here</a>
+    - For Windows follow instructions <a href="https://treehouse.github.io/installation-guides/windows/node-windows.html">here</a>
+    - For Ubuntu follow instructions <a href="https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04">here</a>
+- `git clone https://github.com/Proception/challenges.git`
+- change directory to challenges/
+- run `npm install` to install all dependecies
+- run `npm run start:dev` to run in development environment
+- If you are not redirected;
+    - visit `http://localhost:4200`
 
-### 1. Consent collection form
-A form that allows a user to enter her name, email address and to select data processes that she agrees to.
+## Running Tests
+- navigate to challenges directory
+- run `npm test`
 
-When the user fills out the form and clicks on the "Give consent" button, the consent gets added to the list of consents that appears on the second view.
+## Production Deployment
+- `git clone https://github.com/Proception/challenges.git`
+- change directory to challenges/
+- checkout to release branch
+- run `npm install`to install all dependecies
+- run `npm run build`
+- run `npm start`
 
-![Mockup](https://github.com/didomi/challenges/raw/master/frontend/wireframes/1%20-%20Give%20consent.png)
-
-### 2. Consent management
-A list of consents that were given by users. This view simply displays items from a list with client-side pagination.
-
-![Mockup](https://github.com/didomi/challenges/raw/master/frontend/wireframes/2%20-%20Collected%20consents.png)
-
-# Rules of the game
-This challenge is a chance for engineers at Didomi to see how you code and organize a project to implement a specification.
-
-## Deliverables
-The expected deliverable is a fully functional project that includes the following:
-
-- Code of the application
-- Tests of the application
-- Documentation for launching a development environment and running the application
-
-You are expected to match the mockups and use the right components as needed.
- 
-## Technical stack
-The application should use one of the following stacks:
-
-- [Angular 4+](https://angular.io/) with [Angular Material](https://material.angular.io/)
-- [React](https://reactjs.org/) with Redux and a Material library
-
-Except for these requirements, feel free to use whichever libraries, frameworks or tools you deem necessary.
-
-## HTTP API calls
-This challenge requires HTTP API calls when a user adds a consent or to populate the list of consents.
-
-What we recommend is to implement the calls as standard HTTP requests to a REST API with the following specification:
-
- - `GET /consents`: Returns a list of consents along with pagination data.
- - `POST /consent`: Add a new consent.
-
-You can then mock the HTTP calls by mocking the `XMLHttpRequest` object or the `fetch` method in the browser. The mock should have a pre-populated list of objects and add a new object to the list when a `POST` request is sent.
-
-Other methods of mocking are also acceptable as long as there is no actual HTTP calls sent out.
-
-## Expectations
-Your code will be reviewed by multiple engineers at Didomi and will serve as the base for a discussion in interviews.  
-We want to see how you approach working on a complete project and strongly recommend that you work on this challenge alone. We will particularly focus on your attention to details and expect the code to be professionally structured, commented, documented, and tested.
-
-If anything is unclear, feel free to ask any question that might help you understand the specifications or requirements better.
-
-## Delivery
-Your application can be sent to us as a GitHub repository (in which case you are welcome to fork this repository) or as a compressed archive containing all the deliverables. 
+## Test or Try out Application
+- click <a href="https://didomi-challenge.herokuapp.com/">here</a>

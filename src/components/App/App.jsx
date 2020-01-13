@@ -7,7 +7,10 @@ import ConsentView from '../../views/ConsentView.jsx';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
+/**
+ * Higher Order Component that takes in 
+ * other components and is responsible for navigation.
+ */
 export default class App extends Component {
 
   render() {

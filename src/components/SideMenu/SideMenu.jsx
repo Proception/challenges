@@ -4,7 +4,12 @@ import DisplayCard from '../DisplayCard/DisplayCard.jsx';
 import './SideMenu.scss';
 
 
-
+/**
+ * @desc This is a reusable side menu component
+ * @param {String} activeMenu : This determines which menu item is currently active
+ * @param {object} menuItems : This contains the menu ID, action, and value
+ * @returns {JSX}
+ */
 export default class SideMenu extends Component {
 
   generateSideMenuItems = () => {
@@ -42,8 +47,6 @@ export default class SideMenu extends Component {
 SideMenu.propTypes = {
   activeMenu: PropTypes.string,
   menuItems: PropTypes.array,
-  onClick: PropTypes.func,
-  children: PropTypes.array
 };
 
 
