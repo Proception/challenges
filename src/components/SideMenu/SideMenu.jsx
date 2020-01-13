@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import DisplayCard from '../DisplayCard/DisplayCard.jsx';
 import './SideMenu.scss';
 
@@ -12,10 +13,8 @@ export default class SideMenu extends Component {
       menuItems
     } = this.props;
 
-    return menuItems.map(menuItem => <a className="side-menu-item-link" onClick={() => menuItem.action()} >
-      <div className={`${activeMenu === menuItem.menuId ? 'side-menu-item-active' : 'side-menu-item'}` }>
-        <div className="side-menu-item-image">
-        </div>
+    return menuItems.map(menuItem => <a key={menuItem.menuId} className="side-menu-item-link" onClick={() => menuItem.action()} >
+      <div className={`${activeMenu === menuItem.menuId ? 'side-menu-item-active' : 'side-menu-item'}`}>
         <div className="text-space">{menuItem.menuValue}</div>
       </div>
     </a>
@@ -38,5 +37,13 @@ export default class SideMenu extends Component {
     );
   }
 }
+
+
+SideMenu.propTypes = {
+  activeMenu: PropTypes.string,
+  menuItems: PropTypes.array,
+  onClick: PropTypes.func,
+  children: PropTypes.array
+};
 
 

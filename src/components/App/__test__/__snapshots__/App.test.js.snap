@@ -14,7 +14,7 @@ exports[`App component 1`] = `
         className="side-menu-card-container"
       >
         <div
-          class="side-menu-card"
+          className="side-menu-card"
         >
           <div
             className="side-menu-content"
@@ -30,9 +30,6 @@ exports[`App component 1`] = `
                   className="side-menu-item-active"
                 >
                   <div
-                    className="side-menu-item-image"
-                  />
-                  <div
                     className="text-space"
                   >
                     Give consent
@@ -46,9 +43,6 @@ exports[`App component 1`] = `
                 <div
                   className="side-menu-item"
                 >
-                  <div
-                    className="side-menu-item-image"
-                  />
                   <div
                     className="text-space"
                   >
@@ -65,7 +59,7 @@ exports[`App component 1`] = `
       className="col-sm-12 col-md-9 col-lg-9 col-xl-9"
     >
       <div
-        class="side-menu-card"
+        className="side-menu-card"
       >
         <div
           className="form-container"
@@ -80,14 +74,14 @@ exports[`App component 1`] = `
               className="input-container"
             >
               <input
-                class="input-field"
+                className="input-field"
                 name="name"
                 onChange={[Function]}
                 placeholder="Name"
                 value=""
               />
               <input
-                class="input-field"
+                className="input-field"
                 name="email"
                 onChange={[Function]}
                 placeholder="Email address"
@@ -108,7 +102,7 @@ exports[`App component 1`] = `
                 className="consent-list"
               >
                 <input
-                  class="input-field"
+                  className="input-field"
                   name=""
                   onChange={[Function]}
                   type="checkbox"
@@ -119,7 +113,7 @@ exports[`App component 1`] = `
                  
                 <br />
                 <input
-                  class="input-field"
+                  className="input-field"
                   name=""
                   onChange={[Function]}
                   type="checkbox"
@@ -130,7 +124,7 @@ exports[`App component 1`] = `
                  
                 <br />
                 <input
-                  class="input-field"
+                  className="input-field"
                   name=""
                   onChange={[Function]}
                   type="checkbox"

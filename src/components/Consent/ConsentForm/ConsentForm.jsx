@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 import validator from 'validator';
 import Input from '../../InputField/Input.jsx';
 import Button from '../../Button/Button.jsx';
@@ -57,9 +58,13 @@ export default class ConsentForm extends Component {
   }
 
   updateConsent = ({name, email, selectedConsents}) => {
+    const {viewConsentList} = this.props;
     Notify.update(
       'Would you like to update consent',
-      () => this.props.updateConsent({name, email, selectedConsents}), 
+      async () => {
+        await this.props.updateConsent({name, email, selectedConsents});
+        viewConsentList();
+      }, 
       ['Cancel', 'Update']
     );
   }
@@ -102,9 +107,10 @@ export default class ConsentForm extends Component {
     }
   }
 
-  handleFormSubmit = (e) => {
+  handleFormSubmit = async (e) => {
     e.preventDefault();
     const {name, email, selectedConsents} = this.state;
+    const {viewConsentList} = this.props;
     const isFormValid = !validator.isEmpty(name) && !validator.isEmpty(email) && validator.isEmail(email) && selectedConsents.length > 0;
 
     if (!isFormValid) {
@@ -116,7 +122,8 @@ export default class ConsentForm extends Component {
     }
 
     if (isFormValid && !this.doesEmailExist(email)) {
-      this.props.saveConsent({name, email, selectedConsents});
+      await this.props.saveConsent({name, email, selectedConsents});
+      viewConsentList();
     }
   }
 
@@ -139,3 +146,12 @@ export default class ConsentForm extends Component {
     );
   }
 }
+
+ConsentForm.propTypes = {
+  rows: PropTypes.array,
+  saveConsent: PropTypes.func,
+  updateConsent: PropTypes.func,
+  viewConsentList: PropTypes.func,
+  totalConsents: PropTypes.object,
+  consents: PropTypes.array
+};

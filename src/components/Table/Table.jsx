@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import TableHeader from './TableHeader.jsx';
 import TableRow from './TableRow.jsx';
 import TableFooter from './TableFooter.jsx';
@@ -72,7 +73,7 @@ export default class Table extends Component {
         const value = [consents[index], consents[index + 1] ? consents[index + 1] : ''];
         const pageData = {};
         pageData[key] = value;
-        pageDataArray[pageNumber - 1] = pageData
+        pageDataArray[pageNumber - 1] = pageData;
         index = index + 2;
         pageNumber++;
       }
@@ -138,3 +139,8 @@ export default class Table extends Component {
     </div>;
   }
 }
+
+Table.propTypes = {
+  tableRows: PropTypes.array,
+  tableHeaders: PropTypes.array
+};

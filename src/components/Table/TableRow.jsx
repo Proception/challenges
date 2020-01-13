@@ -1,7 +1,8 @@
 import React, {Fragment} from 'react';
+import PropTypes from 'prop-types';
 import Column from './TableColumn.jsx';
 
-const TableRow = ({ key, rows }) => {
+const TableRow = ({ rows }) => {
   if (rows.length === 0) {
     const noDataMessage = 'There is no consent data to display';
     return <div className={'no-data-message'}>{noDataMessage}</div>;
@@ -23,5 +24,8 @@ const TableRow = ({ key, rows }) => {
   );
 };
 
+TableRow.propTypes = {
+  rows: PropTypes.array
+};
 
 export default TableRow;

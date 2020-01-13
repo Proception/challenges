@@ -5,7 +5,7 @@ exports[`DisplayCard component 1`] = `
   className="side-menu-card-container"
 >
   <div
-    class="side-menu-card"
+    className="side-menu-card"
   >
     <div
       className="side-menu-content"
@@ -21,9 +21,6 @@ exports[`DisplayCard component 1`] = `
             className="side-menu-item-active"
           >
             <div
-              className="side-menu-item-image"
-            />
-            <div
               className="text-space"
             >
               Give consent
@@ -37,9 +34,6 @@ exports[`DisplayCard component 1`] = `
           <div
             className="side-menu-item"
           >
-            <div
-              className="side-menu-item-image"
-            />
             <div
               className="text-space"
             >

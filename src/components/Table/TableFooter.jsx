@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const TableFooter = ({ key, columns, handlePageNumbers, currentPage }) => {
+const TableFooter = ({ columns, handlePageNumbers, currentPage }) => {
   return (
-    <div key={key} className={'table-footer'}>
+    <div className={'table-footer'}>
       {
         columns
           .map(
@@ -19,6 +20,13 @@ const TableFooter = ({ key, columns, handlePageNumbers, currentPage }) => {
       }
     </div>
   );
+};
+
+
+TableFooter.propTypes = {
+  columns: PropTypes.array,
+  handlePageNumbers: PropTypes.func,
+  currentPage: PropTypes.number
 };
 
 export default TableFooter;
