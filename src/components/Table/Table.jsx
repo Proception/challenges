@@ -5,7 +5,12 @@ import TableRow from './TableRow.jsx';
 import TableFooter from './TableFooter.jsx';
 
 import './table.scss';
-
+/**
+ * @desc This is a reusable table component
+ * @param {Array} tableRows : This is a prop passed to the table component with the table rows
+ * @param {Array} tableHeaders : This contains the menu ID, action, and value
+ * @returns {JSX}
+ */
 export default class Table extends Component {
 
   constructor () {

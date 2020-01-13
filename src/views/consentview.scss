@@ -17,9 +17,9 @@
     justify-items: center;
     font-size: 20px;
     font-weight: bold;
-    text-transform: none; // mac ff fix
-    -webkit-font-smoothing: antialiased; // safari mac nicer
-    -moz-osx-font-smoothing: grayscale; // fix fatty ff on mac
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   .tab-list-item img {
@@ -32,14 +32,6 @@
     border-bottom: 3px solid #2867B2;
   }
 
-  .top-container {
-    background-color: white;
-    box-shadow: 0px 10px 15px rgba(81, 80, 80, 0.08);
-    // position: -webkit-sticky;
-    // position: sticky;
-    // top: 0;
-  }
-
   .tabs {
     border: #2867B2;
   }
@@ -49,133 +41,7 @@
     margin-bottom: 0;
   }
 
-  .profile-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-  }
-
+  
   .container {
     padding-top: 30px;
-  }
-
-  .photo-container {
-    padding-left: 0px;
-    margin: 0px;
-  }
-
-  .name {
-    color: #2867B2;
-    text-align: left;
-    justify-items: center;
-    font-size: 26px;
-    font-weight: bold;
-    text-transform: none; // mac ff fix
-    -webkit-font-smoothing: antialiased; // safari mac nicer
-    -moz-osx-font-smoothing: grayscale; // fix fatty ff on mac
-    padding: 0px;
-  }
-
-  .summary {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 21px;
-    text-transform: none; // mac ff fix
-    -webkit-font-smoothing: antialiased; // safari mac nicer
-    -moz-osx-font-smoothing: grayscale; // fix fatty ff on mac
-    padding-top: 10px;
-  }
-
-  .icon-url {
-    margin-right: 10px;
-    text-decoration: none !important;
-    cursor: pointer;
-  }
-
-  .social-icons {
-    padding-bottom: 5px;
-  }
-
-  .social-icons img {
-    max-width: 28px;
-    max-height: 28px;
-    text-align: left;
-  }
-
-
-
-  .contact-text{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    color: #515050;
-    margin-left: 5px;
-    cursor: pointer;
-  }
-
-  .contact-text:hover{
-    color: #2867B2;
-  }
-
-  .contact-details{
-    padding-top: 15px;
-  }
-
-
-   /* Portrait */
-  @media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
-
-    .photo-container {
-      padding: 0px;
-    }
-
-    .profile-image img {
-      width: 60%;
-      height: auto;
-      border-radius: 50%;
-    }
-    .profile-image {
-      text-align: center;
-    }
-
-    .name {
-      text-align: center;
-      padding-top: 10px;
-      font-size: 22px;
-    }
-
-    .summary {
-      text-align: center;
-      padding-right: 15px;
-      padding-left: 15px;
-      font-size: 14px;
-      line-height: 21px;
-    }
-
-    .contact-details{
-      text-align: center;
-      width: 100%;
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
-    .tab-list {
-      width: 175%;
-    }
-    .tab-list-item {
-      padding: 0.5rem 1.5rem 0.5rem 1.5rem;
-      font-size: 16px;
-    }
-
-    .tabs {
-      position: relative;
-      overflow-x: scroll;
-      overflow-y: hidden;
-    }
   }

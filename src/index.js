@@ -6,6 +6,11 @@ import configureStore from './store';
 
 import App from './components/App/App.jsx';
 
+/**
+ * Entry point of the application. 
+ * Here we configure the redux store 
+ * and render the app inside the element with Id app
+ */
 render(
   <Provider store={configureStore()}>
     <App />

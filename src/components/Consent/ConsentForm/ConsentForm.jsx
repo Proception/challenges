@@ -6,6 +6,15 @@ import Button from '../../Button/Button.jsx';
 import Notify from '../../../utils/Notify';
 import './consentform.scss';
 
+/**
+ * @desc This component is responsible for handling the consent form
+ * @param {Function} saveConsent : This is a function passed in as a prop that handles saving the consent data
+ * @param {Function} updateConsent : This is a function passed in as a prop that handles updating the consent data
+ * @param {Function} viewConsentList : This is a function passed in as a prop that handles navigation to view consent list
+ * @param {Object} totalConsents :  This is an object passed in as a prop that is connected to the redux store
+ * @param {Array} consents : This is an array of consents passed in as a prop used to populate the choice of consents
+ * @returns {JSX}
+ */
 export default class ConsentForm extends Component {
   constructor(props) {
     super(props);
@@ -148,7 +157,6 @@ export default class ConsentForm extends Component {
 }
 
 ConsentForm.propTypes = {
-  rows: PropTypes.array,
   saveConsent: PropTypes.func,
   updateConsent: PropTypes.func,
   viewConsentList: PropTypes.func,
