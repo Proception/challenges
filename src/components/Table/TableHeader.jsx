@@ -1,14 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Column from './TableColumn.jsx';
 
-const TableHeader = ({ key, columns }) => {
+const TableHeader = ({ columns }) => {
   return (
-    <div key={key} className={'table-header'}>
+    <div className={'table-header'}>
       {
         columns.map((columnValue) => <Column value={columnValue} />)
       }
     </div>
   );
+};
+
+
+TableHeader.propTypes = {
+  columns: PropTypes.array
 };
 
 export default TableHeader;

@@ -14,14 +14,14 @@ exports[`Consent Form Component renders as expected 1`] = `
       className="input-container"
     >
       <input
-        class="input-field"
+        className="input-field"
         name="name"
         onChange={[Function]}
         placeholder="Name"
         value=""
       />
       <input
-        class="input-field"
+        className="input-field"
         name="email"
         onChange={[Function]}
         placeholder="Email address"

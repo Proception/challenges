@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
   withRouter
@@ -39,7 +40,7 @@ export class ConsentView extends Component {
   }
 
   viewConsentForm = () => {
-    this.props.history.push('/give-consent')
+    this.props.history.push('/give-consent');
     document.title = 'Give consent';
     this.setState({activeMenu: 'consentForm'});
   }
@@ -56,7 +57,7 @@ export class ConsentView extends Component {
       {name: '', value: 'Be shown targeted ads'},
       {name: '', value: 'Contribute to anonymous visit statistics'}
     ];
-    return <ConsentForm totalConsents={this.props.totalConsents} updateConsent={this.props.updateConsent} saveConsent={this.props.saveConsent} consents={consents} />;
+    return <ConsentForm viewConsentList={this.viewConsentList} totalConsents={this.props.totalConsents} updateConsent={this.props.updateConsent} saveConsent={this.props.saveConsent} consents={consents} />;
   }
 
   renderConsentList = () => {
@@ -119,6 +120,19 @@ export class ConsentView extends Component {
     );
   }
 }
+
+ConsentView.propTypes = {
+  saveConsent: PropTypes.func,
+  updateConsent: PropTypes.func,
+  getAllConsents: PropTypes.func,
+  totalConsents: PropTypes.object,
+  consents: PropTypes.array,
+  defaultMenu: PropTypes.string,
+  activeMenu: PropTypes.string,
+  history: PropTypes.object,
+  push: PropTypes.func
+};
+
 
 export  const mapStateToProps = state => ({
   totalConsents: state.consentReducer

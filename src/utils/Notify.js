@@ -71,8 +71,8 @@ class Notify {
       buttons: buttonOptions,
       dangerMode: true,
     })
-      .then((willDelete) => {
-        if (willDelete) {
+      .then((willUpdate) => {
+        if (willUpdate) {
           action();
         }
       });

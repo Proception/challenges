@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Input = (props) => {
   return (
     <input 
-      class={props.className}
+      className={props.className}
       type={props.type}
       min={props.min}
       name= {props.name}
@@ -13,6 +14,17 @@ const Input = (props) => {
       placeholder={props.placeholder}
     />
   );
+};
+
+Input.propTypes = {
+  min: PropTypes.number,
+  className: PropTypes.string,
+  type: PropTypes.string,
+  name: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+  onClick: PropTypes.func,
+  placeholder: PropTypes.string
 };
 
 export default Input;

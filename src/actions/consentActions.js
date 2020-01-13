@@ -14,7 +14,7 @@ import {
   updateConsentApi
 } from '../api/consentApi/consentApi';
 
-const basePath = 'https://localhost:4200/api/v1'
+const basePath = 'https://localhost:4200/api/v1';
 
 
 const saveConsent = (consentData, mockType = 201) => async (dispatch, getState) => {

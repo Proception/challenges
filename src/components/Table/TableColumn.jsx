@@ -14,5 +14,4 @@ const Column = ({value}) => {
   }
 };
 
-
 export default Column;
