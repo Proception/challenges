@@ -3,6 +3,8 @@
 
 <a href="https://codeclimate.com/github/Proception/challenges/test_coverage"><img src="https://api.codeclimate.com/v1/badges/5a1604f66fe7aa7e131d/test_coverage" /></a>
 
+<a href="https://circleci.com/gh/Proception/challenges"><img src="https://circleci.com/gh/Proception/challenges.svg?style=svg"></a>
+
 # Background
 This is a consent management application composed of two sections, consent collection and consent management. It is a frontend application built with React and Redux.
 
@@ -31,7 +33,7 @@ This is a consent management application composed of two sections, consent colle
 ## Production Deployment
 - `git clone https://github.com/Proception/challenges.git`
 - change directory to challenges/
-- checkout to release branch
+- checkout to `release` branch
 - run `npm install`to install all dependecies
 - run `npm run build`
 - run `npm start`
