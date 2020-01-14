@@ -54,6 +54,10 @@ export default class Table extends Component {
     });
   }
 
+  /**
+   * Refactor method to be configurable
+   * Should be able to determine the total number of items per page via props
+   */
   formatPages = () => {
     const {tableRows:consents} = this.props;
     const pageDataArray = [];
